@@ -1,0 +1,10 @@
+.TodoList {
+    margin: 20px 0;
+    padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .TodoList {
+        padding: 20px 0;
+    }
+  }

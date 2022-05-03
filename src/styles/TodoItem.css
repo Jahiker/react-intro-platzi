@@ -1,0 +1,85 @@
+.TodoItem {
+    list-style: none;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--color-primary);
+    display: flex;
+    gap: 20px;
+    box-shadow: 2px 2px 4px 1px var(--color-light);
+    transform: scale(1);
+    transition: 0.5s;
+    font-size: 2rem;
+    border: 3px solid var(--color-secondary);
+    color: var(--color-secondary);
+    font-weight: 500;
+    position: relative;
+}
+
+.TodoItem:hover {
+    transform: scale(1.02);
+    box-shadow: 2px 2px 4px 1px var(--color-shadow);
+    background-color: var(--color-primary-light);
+}
+
+.TodoItem .close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    background-color: var(--color-danger);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 3px solid var(--color-light);
+    color: var(--color-light);
+    font-size: 1.8rem;
+    transition: 0.5s;
+    transform: rotate(45deg) scale(1);
+    transform-origin: center;
+    cursor: pointer;
+}
+
+.TodoItem .close:hover {
+    transform: rotate(45deg) scale(1.1);
+    background-color: var(--color-danger-dark);
+}
+
+.TodoItem .indicator {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent;
+    font-size: 0;
+    cursor: pointer;
+}
+
+.TodoItem .indicator::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--color-danger);
+    box-shadow: var(--shadow-danger);
+}
+
+.TodoItem.completed {
+    background-color: var(--color-primary-light);
+    border-color: var(--color-shadow);
+}
+
+.TodoItem.completed p {
+    text-decoration: line-through;
+}
+
+.TodoItem.completed .indicator::before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--color-success);
+    box-shadow: var(--shadow-success);
+    border: 1px solid rgb(195, 195, 195);
+}

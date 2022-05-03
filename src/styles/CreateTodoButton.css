@@ -1,0 +1,26 @@
+.CreateTodoButton {
+    background-color: var(--color-success);
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    font-size: 3rem;
+    font-weight: 600;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px 1px var(--color-shadow);
+}
+
+.CreateTodoButton:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+}
+
+@media screen and (max-width: 768px) {
+    .CreateTodoButton {
+        bottom: 30px;
+        right: 20px;
+    }
+}

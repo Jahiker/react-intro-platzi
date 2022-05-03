@@ -1,0 +1,7 @@
+.TodoCounter {
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px 0;
+    color: var(--color-secondary);
+}
