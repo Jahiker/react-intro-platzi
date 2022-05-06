@@ -6,9 +6,9 @@ const TodoCounterStyles = {
     // backgroundColor: 'yellow'
 }
 
-function TodoCounter() {
+function TodoCounter(props) {
     return (
-        <h2 className="TodoCounter" style={TodoCounterStyles}>Has Completado 2 de 3 TODOs</h2>
+        <h2 className="TodoCounter" style={TodoCounterStyles}>Has Completado {props.completed} de {props.total} TODO's</h2>
     );
 }
 
