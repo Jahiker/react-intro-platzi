@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/TodoItem.css";
+import { MdOutlineDelete } from "react-icons/md";
 
 function TodoItem(props) {
   return (
@@ -12,7 +13,7 @@ function TodoItem(props) {
       <span 
         className="close"
         onClick={props.onDelete}
-      >+</span>
+      ><MdOutlineDelete/></span>
     </li>
   );
 }

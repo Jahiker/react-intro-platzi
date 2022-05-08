@@ -11,11 +11,23 @@
     right: 40px;
     cursor: pointer;
     box-shadow: 2px 2px 4px 1px var(--color-shadow);
+    z-index: 3;
+    transition: all 0.5s;
+}
+
+.CreateTodoButton.modal-open {
+    transform: rotate(45deg);
+    background-color: var(--color-danger);
+    color: var(--color-light);
 }
 
 .CreateTodoButton:hover {
     background-color: var(--color-secondary);
     color: var(--color-light);
+}
+
+.CreateTodoButton.modal-open:hover {
+    background-color: var(--color-danger-dark);
 }
 
 @media screen and (max-width: 768px) {

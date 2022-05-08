@@ -1,24 +1,16 @@
 import React from "react";
 import "../styles/CreateTodoButton.css";
 
-function CreateTodoButton() {
+function CreateTodoButton(props) {
+
   const onClickButton = () => {
-    const localStorageTodos = localStorage.getItem('TODO_V1');
-
-    if (!localStorageTodos) {
-      localStorage.setItem('TODO_V1', '[{text:"Comprar Comida",completed:false}]');
-    } else {
-      let parsedTodo = JSON.parse(localStorageTodos);
-      parsedTodo.push({ text: "Tomar Curso React " + Date.now(), completed: false });
-
-      localStorage.setItem('TODO_V1', JSON.stringify(parsedTodo));
-    }
+    props.setOpenModal(prevState => !prevState);
   }
 
   return (
     <button 
-      className="CreateTodoButton" 
-      onClick={() => onClickButton('Todo Created')}
+      className={`CreateTodoButton ${!!props.openModal && ('modal-open') }`} 
+      onClick={onClickButton}
     >
       +
     </button>

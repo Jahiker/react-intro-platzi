@@ -1,0 +1,35 @@
+.modal-popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 0;
+    bottom: 0;
+}
+
+.modal-popup::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-popup .modal-content {
+    min-width: 40%;
+    background-color: var(--color-light);
+    padding: 20px;
+    z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .modal-popup .modal-content {
+        min-width: 80%;
+        max-width: 95%;
+    }
+}
